@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECHMECHS Healthcare | Initializing Clinical Cockpit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="loading.css" />
+  </head>
+  <body class="loading-page">
+    <div class="bg-grid"></div>
+    <main class="loader-shell" id="loader-shell">
+      <div class="loader-header">
+        <div class="brand-avatar">
+          <img src="/logo.png" alt="TECHMECHS Logo" />
+        </div>
+        <div class="brand-info">
+          <span class="system-tag">TECHMECHS CLINICAL INTELLIGENCE</span>
+          <h1 class="loader-title">Initializing Decision Support Engine</h1>
+        </div>
+      </div>
+
+      <div class="hud-wrap">
+        <div class="ring ring-outer"></div>
+        <div class="ring ring-inner"></div>
+        <div class="ring ring-core"></div>
+      </div>
+
+      <p id="status-text" class="status-text">Verifying real-time telemetry and patient risk baseline...</p>
+
+      <div class="ecg-container">
+        <svg class="ecg" viewBox="0 0 1000 120" preserveAspectRatio="none">
+          <path
+            d="M0,60 L120,60 L170,60 L200,20 L235,100 L270,60 L460,60 L500,60 L540,30 L570,95 L610,60 L1000,60"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="progress-meta">
+          <span id="progress-text" class="progress-text">0%</span>
+          <button id="skip-btn" class="skip-btn" type="button">Skip to Dashboard &rarr;</button>
+        </div>
+      </div>
+    </main>
+    <script src="loading.js"></script>
+  </body>
+</html>

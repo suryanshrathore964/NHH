@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECHMECHS | Clinical Fall Risk Intelligence Command Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body class="dashboard-page">
+    <!-- Top Clinical Command Bar -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="brand-avatar-wrap">
+          <img src="/logo.png" alt="TECHMECHS Logo" class="brand-logo" />
+        </div>
+        <div class="brand-details">
+          <div class="brand-title-row">
+            <h1 class="brand-title">TECHMECHS</h1>
+            <span class="live-system-pill">
+              <span class="pulse-beacon"></span>
+              AI INFERENCE ENGINE ACTIVE
+            </span>
+          </div>
+          <p class="brand-subtitle">Clinical Fall Risk Intelligence & Decision Support Center</p>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="user-profile-badge">
+          <div class="avatar-circle">Dr</div>
+          <div class="user-meta">
+            <span class="clinician-name" id="welcome-user">Signed in: Dr. Clinician</span>
+            <span class="last-time" id="last-prediction-time">Telemetry: Live Stream</span>
+          </div>
+        </div>
+
+        <div class="header-action-group">
+          <button id="emergency-toggle-btn" class="action-btn emergency-btn" type="button" title="View Emergency Locality Directory">
+            <span class="btn-icon">🚨</span>
+            <span>Emergency Dispatch</span>
+          </button>
+          <button id="settings-btn" class="action-btn secondary-btn" type="button" title="Configure Alert Thresholds">
+            <span class="btn-icon">⚙️</span>
+            <span>Alert Settings</span>
+          </button>
+          <button id="download-pdf-btn" class="action-btn primary-btn" type="button" title="Export Clinical Audit PDF Report">
+            <span class="btn-icon">📄</span>
+            <span>Export PDF Audit</span>
+          </button>
+          <button id="logout-btn" class="action-btn ghost-btn" type="button" title="Sign out of system">
+            <span class="btn-icon">🚪</span>
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-container">
+      <!-- Executive Clinical KPI Stat Ribbon -->
+      <section class="kpi-ribbon">
+        <div class="kpi-stat-card">
+          <div class="kpi-icon-wrap bg-blue-soft">📊</div>
+          <div class="kpi-content">
+            <span class="kpi-label">Current Evaluated Risk</span>
+            <div class="kpi-value-row">
+              <span id="risk-prob" class="kpi-main-val">--%</span>
+              <span id="result-pill" class="status-pill neutral">No Patient Evaluated</span>
+            </div>
+            <span class="kpi-hint">Confidence: <strong id="confidence">--</strong></span>
+          </div>
+        </div>
+
+        <div class="kpi-stat-card">
+          <div class="kpi-icon-wrap bg-emerald-soft">❤️</div>
+          <div class="kpi-content">
+            <span class="kpi-label">Live Vitals Telemetry</span>
+            <div class="kpi-value-row">
+              <span class="kpi-main-val" id="telemetry-display">Sensors Active</span>
+              <span class="telemetry-badge active">Streaming</span>
+            </div>
+            <span class="kpi-hint">BP & HR Continuous Feed</span>
+          </div>
+        </div>
+
+        <div class="kpi-stat-card">
+          <div class="kpi-icon-wrap bg-purple-soft">🏥</div>
+          <div class="kpi-content">
+            <span class="kpi-label">Patient Census Monitored</span>
+            <div class="kpi-value-row">
+              <span class="kpi-main-val" id="total-patients-count">0</span>
+              <span class="kpi-subtag">Patients in registry</span>
+            </div>
+            <span class="kpi-hint" id="census-breakdown">Low: 0 • Med: 0 • High: 0</span>
+          </div>
+        </div>
+
+        <div class="kpi-stat-card">
+          <div class="kpi-icon-wrap bg-amber-soft">🧠</div>
+          <div class="kpi-content">
+            <span class="kpi-label">Validated ML Accuracy</span>
+            <div class="kpi-value-row">
+              <span class="kpi-main-val" id="accuracy">88.5%</span>
+              <span class="model-badge" id="best-model">Logistic / Ensemble</span>
+            </div>
+            <span class="kpi-hint">Precision: <strong id="precision">87.5%</strong> • Recall: <strong id="recall">88.2%</strong></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Clinical Cockpit Layout (2-Column Grid) -->
+      <div class="cockpit-grid">
+        <!-- LEFT COLUMN: Patient Intake & Live Telemetry Unit -->
+        <div class="cockpit-col-intake">
+          <section class="card intake-card">
+            <div class="card-header">
+              <div class="header-text">
+                <h2>Patient Clinical Intake</h2>
+                <p>Telemetry assessment & fall predictor</p>
+              </div>
+            </div>
+
+            <!-- 1-Click Quick Demo Presets -->
+            <div class="presets-container">
+              <span class="presets-label">Quick Patient Presets:</span>
+              <div class="presets-buttons">
+                <button type="button" id="preset-low" class="preset-chip chip-low" title="Load healthy 58yo patient profile">
+                  🟢 Low Risk
+                </button>
+                <button type="button" id="preset-med" class="preset-chip chip-med" title="Load 72yo patient with mild hypertension">
+                  🟡 Moderate Risk
+                </button>
+                <button type="button" id="preset-high" class="preset-chip chip-high" title="Load 84yo post-op patient with high fall risk">
+                  🔴 Critical Fall Risk
+                </button>
+              </div>
+            </div>
+
+            <form id="predict-form" class="intake-form">
+              <!-- Demographics -->
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label for="input-age">
+                    <span>Patient Age (Years)</span>
+                    <strong id="age-badge" class="field-badge">75</strong>
+                  </label>
+                  <input
+                    type="number"
+                    id="input-age"
+                    name="age"
+                    min="18"
+                    max="110"
+                    value="75"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="input-meds-count">
+                    <span>Active Medications</span>
+                    <strong id="meds-count-badge" class="field-badge">5</strong>
+                  </label>
+                  <input
+                    type="number"
+                    id="input-meds-count"
+                    name="medications_count"
+                    min="0"
+                    max="20"
+                    value="5"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Live Vitals Telemetry Sub-panel -->
+              <div class="telemetry-panel">
+                <div class="telemetry-panel-header">
+                  <span class="telemetry-title">⚡ REAL-TIME CLINICAL VITALS</span>
+                </div>
+
+                <div class="vitals-row">
+                  <!-- Systolic BP -->
+                  <div class="vital-box">
+                    <div class="vital-label-row">
+                      <label for="systolicBP">Systolic BP (mmHg)</label>
+                      <span id="live-bp" class="vital-live-dot">Live</span>
+                    </div>
+                    <div class="vital-input-group">
+                      <input
+                        id="systolicBP"
+                        type="number"
+                        name="systolic_bp"
+                        min="70"
+                        max="240"
+                        value="145"
+                        required
+                      />
+                    </div>
+                    <div class="vitals-mode-toggle">
+                      <button id="bp-manual-btn" class="vital-mode-btn active" type="button">Manual</button>
+                      <button id="bp-auto-btn" class="vital-mode-btn" type="button">Auto-Simulate</button>
+                    </div>
+                  </div>
+
+                  <!-- Heart Rate -->
+                  <div class="vital-box">
+                    <div class="vital-label-row">
+                      <label for="heartRate">Heart Rate (BPM)</label>
+                      <span id="live-hr" class="vital-live-dot">Live</span>
+                    </div>
+                    <div class="vital-input-group">
+                      <input
+                        id="heartRate"
+                        type="number"
+                        name="heart_rate"
+                        min="35"
+                        max="180"
+                        value="92"
+                        required
+                      />
+                    </div>
+                    <div class="vitals-mode-toggle">
+                      <button id="hr-manual-btn" class="vital-mode-btn active" type="button">Manual</button>
+                      <button id="hr-auto-btn" class="vital-mode-btn" type="button">Auto-Simulate</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mobility Status Segmented -->
+              <div class="form-field">
+                <label>Mobility & Ambulation Independence</label>
+                <div class="mobility-selector">
+                  <label class="mobility-card">
+                    <input type="radio" name="mobility_status" value="0" />
+                    <span class="mobility-content">
+                      <span class="mobility-icon">🚶</span>
+                      <strong>Independent</strong>
+                      <small>Full self-ambulation</small>
+                    </span>
+                  </label>
+                  <label class="mobility-card">
+                    <input type="radio" name="mobility_status" value="1" checked />
+                    <span class="mobility-content">
+                      <span class="mobility-icon">🦯</span>
+                      <strong>Assisted</strong>
+                      <small>Walker / Staff support</small>
+                    </span>
+                  </label>
+                  <label class="mobility-card">
+                    <input type="radio" name="mobility_status" value="2" />
+                    <span class="mobility-content">
+                      <span class="mobility-icon">🛏️</span>
+                      <strong>Bed-Bound</strong>
+                      <small>Severe impairment</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- High-Risk Medications Matrix -->
+              <div class="form-field">
+                <label>High-Risk Fall Medications Prescribed</label>
+                <div class="pill-checkboxes">
+                  <label class="check-pill">
+                    <input type="checkbox" name="sedatives" checked />
+                    <span>💊 Sedatives / Hypnotics</span>
+                  </label>
+                  <label class="check-pill">
+                    <input type="checkbox" name="opioids" />
+                    <span>💉 Opioids / Analgesics</span>
+                  </label>
+                  <label class="check-pill">
+                    <input type="checkbox" name="anti_hypertensives" checked />
+                    <span>🩸 Anti-hypertensives</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Clinical Comorbidities -->
+              <div class="form-row-3">
+                <div class="form-field">
+                  <label for="input-vision">Vision Status</label>
+                  <select id="input-vision" name="vision_impairment" required>
+                    <option value="0">Normal (0)</option>
+                    <option value="1" selected>Mild Impairment (1)</option>
+                    <option value="2">Severe Impairment (2)</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="input-mental">Mental Status</label>
+                  <select id="input-mental" name="mental_status" required>
+                    <option value="0">Normal Cognition (0)</option>
+                    <option value="1" selected>Confused / Disoriented (1)</option>
+                    <option value="2">Acute Delirium (2)</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="input-falls">Previous Falls</label>
+                  <input
+                    type="number"
+                    id="input-falls"
+                    name="previous_falls"
+                    min="0"
+                    max="10"
+                    value="1"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-field checkbox-simple-row">
+                <label class="check-inline">
+                  <input type="checkbox" name="post_surgery" />
+                  <span>Recent Post-Surgery Patient (&le; 14 days)</span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-submit-row">
+                <button type="submit" id="submit-predict-btn" class="primary-btn predict-submit-btn">
+                  <span id="predict-btn-text">⚡ Run Fall Risk Assessment</span>
+                  <span id="predict-spinner" class="spinner-sm hidden"></span>
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN: AI Assessment Results & Decision Engine -->
+        <div class="cockpit-col-results">
+          <!-- Primary Assessment Outcome Card -->
+          <section class="card result-card" id="prediction-report-card">
+            <div class="result-card-inner">
+              <!-- Left Gauge / Probability Visual -->
+              <div class="risk-gauge-container">
+                <div class="gauge-ring-wrap">
+                  <svg class="radial-gauge" viewBox="0 0 120 120">
+                    <circle class="gauge-bg" cx="60" cy="60" r="52"></circle>
+                    <circle id="gauge-bar" class="gauge-fill" cx="60" cy="60" r="52"></circle>
+                  </svg>
+                  <div class="gauge-center-info">
+                    <span id="gauge-percentage" class="gauge-number">--%</span>
+                    <span class="gauge-sub">Fall Risk</span>
+                  </div>
+                </div>
+                <div id="gauge-badge" class="risk-tier-badge neutral">AWAITING ASSESSMENT</div>
+                <div class="model-rule-split">
+                  <small>ML Core: <strong id="ml-prob-val">--%</strong></small>
+                  <small>Clinical Rules: <strong id="rule-score-val">--</strong></small>
+                </div>
+              </div>
+
+              <!-- Right Care Protocols & Intervention Directives -->
+              <div class="care-protocol-container">
+                <div class="protocol-header">
+                  <h3>Clinical Decision & Care Protocols</h3>
+                  <span class="protocol-tag">AUTOMATED INTERVENTION</span>
+                </div>
+
+                <div class="care-protocol-grid">
+                  <div class="care-box">
+                    <span class="care-box-title">⏱️ Estimated Fall Window</span>
+                    <p id="analysis-line-2" class="care-box-val">Within next -- hours based on patient vitals.</p>
+                  </div>
+                  <div class="care-box">
+                    <span class="care-box-title">👀 Observation Frequency</span>
+                    <p id="analysis-line-3" class="care-box-val">Run assessment to view nursing rounds.</p>
+                  </div>
+                </div>
+
+                <div class="care-notes-block">
+                  <div class="note-item">
+                    <span class="note-bullet">💊</span>
+                    <p id="analysis-line-4">Medication scheduling guidance will appear here.</p>
+                  </div>
+                  <div class="note-item alert-note">
+                    <span class="note-bullet">🚨</span>
+                    <p id="analysis-emergency-1">If fall occurs: keep patient supine, evaluate vitals, call code support.</p>
+                  </div>
+                </div>
+
+                <!-- Financial Billing Itemization Strip -->
+                <div class="bill-summary-strip">
+                  <div class="bill-meta">
+                    <span class="bill-title">Estimated Care & Monitoring Bill:</span>
+                    <strong id="estimated-bill" class="bill-amount">$0.00</strong>
+                  </div>
+                  <span class="bill-details-tag" id="bill-multiplier-info">Standard Care Rate</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Clinical Intelligence Charts Hub -->
+          <section class="card charts-hub-card">
+            <div class="charts-hub-header">
+              <div class="header-text">
+                <h2>Predictive Model Analytics Hub</h2>
+                <p>Clinical stratification, feature weights & validation matrix</p>
+              </div>
+              <div class="chart-tab-group">
+                <button type="button" class="tab-btn active" data-chart-tab="stratification">Distribution</button>
+                <button type="button" class="tab-btn" data-chart-tab="importance">Features</button>
+                <button type="button" class="tab-btn" data-chart-tab="age-trend">Age Curve</button>
+                <button type="button" class="tab-btn" data-chart-tab="operational">Stream</button>
+                <button type="button" class="tab-btn" data-chart-tab="matrix">Matrix</button>
+              </div>
+            </div>
+
+            <!-- Tab 1: Risk Distribution -->
+            <div class="chart-tab-pane active" id="pane-stratification">
+              <div class="chart-flex-wrap">
+                <div class="chart-canvas-wrap">
+                  <canvas id="risk-distribution-chart"></canvas>
+                </div>
+                <div class="chart-insights-side">
+                  <h4>Patient Cohort Distribution</h4>
+                  <p>Real-time stratification across the monitored registry based on calibrated risk cutoffs (Low: &lt;35%, Medium: 35-70%, High: &gt;70%).</p>
+                  <div class="cohort-legend">
+                    <div class="cohort-item"><span class="dot dot-low"></span><span>Low Risk Cohort</span></div>
+                    <div class="cohort-item"><span class="dot dot-med"></span><span>Medium Risk Cohort</span></div>
+                    <div class="cohort-item"><span class="dot dot-high"></span><span>Critical High Risk Cohort</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Feature Importance -->
+            <div class="chart-tab-pane" id="pane-importance">
+              <div class="chart-canvas-wrap full">
+                <canvas id="feature-importance-chart"></canvas>
+              </div>
+            </div>
+
+            <!-- Tab 3: Fall Risk by Age Curve -->
+            <div class="chart-tab-pane" id="pane-age-trend">
+              <div class="chart-canvas-wrap full">
+                <canvas id="trend-chart"></canvas>
+              </div>
+            </div>
+
+            <!-- Tab 4: Operational Patient Stream -->
+            <div class="chart-tab-pane" id="pane-operational">
+              <div class="chart-canvas-wrap full">
+                <canvas id="operational-trend-chart"></canvas>
+              </div>
+            </div>
+
+            <!-- Tab 5: Model Validation Confusion Matrix -->
+            <div class="chart-tab-pane" id="pane-matrix">
+              <div class="matrix-view-container">
+                <div class="matrix-grid-box">
+                  <div class="matrix-cell tn-cell">
+                    <span class="m-lbl">True Negative (TN)</span>
+                    <strong id="tn" class="m-val">0</strong>
+                    <small>Correct Non-Falls</small>
+                  </div>
+                  <div class="matrix-cell fp-cell">
+                    <span class="m-lbl">False Positive (FP)</span>
+                    <strong id="fp" class="m-val">0</strong>
+                    <small>Type I False Alarm</small>
+                  </div>
+                  <div class="matrix-cell fn-cell">
+                    <span class="m-lbl">False Negative (FN)</span>
+                    <strong id="fn" class="m-val">0</strong>
+                    <small>Type II Missed Alert</small>
+                  </div>
+                  <div class="matrix-cell tp-cell">
+                    <span class="m-lbl">True Positive (TP)</span>
+                    <strong id="tp" class="m-val">0</strong>
+                    <small>Correct High-Risk Alert</small>
+                  </div>
+                </div>
+                <div class="matrix-meta-box">
+                  <h4>Clinical Validation Metrics</h4>
+                  <p>Trained with 80/20 stratified split against multi-parameter synthetic clinical dataset.</p>
+                  <ul class="matrix-meta-list">
+                    <li>Balanced F1 Score: <strong>87.8%</strong></li>
+                    <li>Area Under ROC Curve: <strong>0.912</strong></li>
+                    <li>Clinical Safety Layer: <strong>Active Hybrid Scoring</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Bottom Full-Width Section: Patient Monitoring Census Table -->
+      <section class="card census-card">
+        <div class="census-header">
+          <div class="header-text">
+            <h2>Patient Monitoring Census Registry</h2>
+            <p>Chronological patient evaluations, probability scores & itemized billing</p>
+          </div>
+          <div class="census-controls">
+            <div class="search-wrap">
+              <input type="text" id="census-search" placeholder="Search patient ID or age..." />
+            </div>
+            <div class="filter-pills-group">
+              <button type="button" class="filter-pill active" data-filter="all">All</button>
+              <button type="button" class="filter-pill pill-filter-high" data-filter="high">High Risk</button>
+              <button type="button" class="filter-pill pill-filter-med" data-filter="medium">Moderate</button>
+              <button type="button" class="filter-pill pill-filter-low" data-filter="low">Low Risk</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="clinical-table">
+            <thead>
+              <tr>
+                <th>Patient ID</th>
+                <th>Timestamp (UTC)</th>
+                <th>Age</th>
+                <th>Vitals (BP / HR)</th>
+                <th>Risk Category</th>
+                <th>Risk Probability</th>
+                <th>Est. Billing</th>
+                <th>Intervention Window</th>
+              </tr>
+            </thead>
+            <tbody id="records-body">
+              <tr>
+                <td colspan="8" class="empty-table-cell">Loading patient monitoring registry...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Risk Reduction Directives & Operational Panels Grid -->
+      <div class="bottom-support-grid">
+        <section class="card support-card">
+          <div class="support-card-header">
+            <h3>🛡️ Clinical Fall Prevention Directives</h3>
+            <span class="support-badge">STANDARD OPERATING PROTOCOL</span>
+          </div>
+          <ul class="directives-list">
+            <li><strong>Bed / Chair Alarms:</strong> Deploy sensor mats for any patient with probability &gt; 70%.</li>
+            <li><strong>Assisted Ambulation:</strong> Dedicated caregiver gait assistance required for transfer & bathroom visits.</li>
+            <li><strong>Medication Timing:</strong> Stagger sedatives and anti-hypertensives to prevent orthostatic hypotension.</li>
+            <li><strong>Environmental Lighting:</strong> Maintain 24/7 pathway illumination and clear footway obstacles.</li>
+            <li><strong>Bedside Vitals Check:</strong> Re-evaluate blood pressure upon sudden positional changes.</li>
+          </ul>
+        </section>
+
+        <section class="card support-card">
+          <div class="support-card-header">
+            <h3>🚨 High-Risk Watchlist (Recent Incidents)</h3>
+            <span class="support-badge alert">PRIORITY INTERVENTION</span>
+          </div>
+          <ul id="high-risk-list" class="incident-feed-list">
+            <li class="empty-list-notice">No high-risk patients currently flagged.</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- MODAL 1: Emergency Locality Dispatch Modal -->
+    <div id="emergency-modal" class="modal-backdrop hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon">🚨</span>
+            <div>
+              <h3>Emergency Clinical Dispatch Directory</h3>
+              <p>Direct lines for emergency code response & hospital trauma units</p>
+            </div>
+          </div>
+          <button type="button" id="close-emergency-btn" class="modal-close-btn">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="locality-select-wrap">
+            <label for="city-select">Select Metropolitan Area / Campus:</label>
+            <select id="city-select" class="form-select">
+              <option value="mumbai">Mumbai Metro Region</option>
+              <option value="delhi">National Capital Region (Delhi/NCR)</option>
+              <option value="bangalore">Bangalore South / Central</option>
+              <option value="pune">Pune Medical Corridor</option>
+            </select>
+          </div>
+
+          <div class="emergency-contacts-wrap">
+            <ul id="emergency-contact-list" class="styled-emergency-list"></ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="done-emergency-btn" class="action-btn primary-btn">Close Directory</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2: Alert Settings & Telemetry Thresholds Modal -->
+    <div id="settings-modal" class="modal-backdrop hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon">⚙️</span>
+            <div>
+              <h3>Alert Thresholds & Caretaker Notifications</h3>
+              <p>Configure automated dispatch triggers & caretaker email</p>
+            </div>
+          </div>
+          <button type="button" id="close-settings-btn" class="modal-close-btn">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="alert-toggle-box">
+            <label class="switch-wrap">
+              <input id="alerts-enabled" type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <div class="switch-text">
+              <strong>Enable Automatic Clinical Alerts</strong>
+              <small>Dispatches notification when vital signs or probability breach safety limits</small>
+            </div>
+          </div>
+
+          <div class="alert-inputs-grid">
+            <div class="form-field">
+              <label for="alert-hr-threshold">Heart Rate Ceiling (BPM)</label>
+              <input id="alert-hr-threshold" type="number" value="110" min="80" max="180" />
+            </div>
+            <div class="form-field">
+              <label for="alert-bp-threshold">Systolic BP Ceiling (mmHg)</label>
+              <input id="alert-bp-threshold" type="number" value="140" min="90" max="220" />
+            </div>
+            <div class="form-field">
+              <label for="alert-risk-threshold">Risk Probability Ceiling (0.0 - 1.0)</label>
+              <input id="alert-risk-threshold" type="number" step="0.05" value="0.75" min="0.1" max="0.99" />
+            </div>
+            <div class="form-field">
+              <label for="caretaker-email">Attending Caretaker Email</label>
+              <input id="caretaker-email" type="email" placeholder="attending.nurse@hospital.com" />
+            </div>
+          </div>
+
+          <div class="alert-test-strip">
+            <button id="test-alert-btn" class="action-btn secondary-btn" type="button">
+              🧪 Dispatch Test Alert Simulation
+            </button>
+            <span id="alert-status-text" class="alert-status-msg">Status: Standby</span>
+          </div>
+
+          <div class="alert-history-wrap">
+            <h4>Recent Alert Dispatch Audit</h4>
+            <ul id="alert-history-list" class="styled-alert-history"></ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="cancel-settings-btn" class="action-btn ghost-btn">Cancel</button>
+          <button type="button" id="save-alert-settings-btn" class="action-btn primary-btn">Save Alert Configurations</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden compatibility fallback for risk-filter select -->
+    <select id="risk-filter" class="hidden">
+      <option value="all">All</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
+    </select>
+
+    <script src="app.js"></script>
+  </body>
+</html>

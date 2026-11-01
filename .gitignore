@@ -1,0 +1,25 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local logs & cookies
+event_tags.log
+cookies*.txt
+evcookies.txt
+
+# IDE & Editor caches
+.idea/
+.vscode/
+*.swp
+*.swo

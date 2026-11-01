@@ -1,0 +1,3879 @@
+{
+  "testuser": [
+    {
+      "id": 3,
+      "timestamp": "2026-03-30T15:07:40Z",
+      "username": "testuser",
+      "payload": {
+        "age": 81,
+        "systolic_bp": 150,
+        "heart_rate": 121,
+        "mobility_status": 2,
+        "medications_count": 7,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 1,
+        "anti_hypertensives": 1,
+        "post_surgery": 1,
+        "vision_impairment": 2,
+        "mental_status": 2
+      },
+      "risk_probability": 0.9999937925322728,
+      "ml_probability": 0.9999913785170457,
+      "rule_layer": {
+        "rule_score": 17.6,
+        "rule_probability": 1.0,
+        "priority": "very_high",
+        "flags": [
+          "Tachycardia (>110)",
+          "Delirium",
+          "Sedatives present",
+          "Opioids present",
+          "Anti-hypertensives present",
+          "High mobility impairment",
+          "Post-surgery",
+          "Age > 75"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 1.0,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 87.5,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 150.0,
+        "risk_multiplier": 1.35,
+        "total_bill": 543.38
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-03-27T15:58:13Z",
+      "username": "testuser",
+      "payload": {
+        "age": 78,
+        "systolic_bp": 92,
+        "heart_rate": 118,
+        "mobility_status": 1,
+        "medications_count": 6,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 1,
+        "vision_impairment": 2,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9991487995091318,
+      "ml_probability": 0.9988177770960165,
+      "rule_layer": {
+        "rule_score": 17.1,
+        "rule_probability": 1.0,
+        "priority": "very_high",
+        "flags": [
+          "Borderline systolic BP (90\u2013100)",
+          "Tachycardia (>110)",
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Anti-HTN + low BP interaction",
+          "Post-surgery",
+          "Age > 75"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9988,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 75.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 149.87,
+        "risk_multiplier": 1.35,
+        "total_bill": 472.32
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "timestamp": "2026-03-27T06:09:35Z",
+      "username": "testuser",
+      "payload": {
+        "age": 79,
+        "systolic_bp": 150,
+        "heart_rate": 92,
+        "mobility_status": 2,
+        "medications_count": 7,
+        "previous_falls": 2
+      },
+      "risk_probability": 0.9999456402671123,
+      "risk_class": "high",
+      "confidence": 0.9999,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 87.5,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 149.99,
+        "risk_multiplier": 1.35,
+        "total_bill": 543.36
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    }
+  ],
+  "suryansh@964": [
+    {
+      "id": 53,
+      "timestamp": "2026-11-01T21:27:47Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 53,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.6051864934619189,
+      "ml_probability": 0.5238103578803889,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.6052,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 90.78,
+        "risk_multiplier": 1.18,
+        "total_bill": 207.42
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 27,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "timestamp": "2026-11-01T21:27:44Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 66,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.7908288760048046,
+      "ml_probability": 0.746888873176591,
+      "rule_layer": {
+        "rule_score": 8.2,
+        "rule_probability": 0.991,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Age 60\u201375",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.7908,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 118.62,
+        "risk_multiplier": 1.35,
+        "total_bill": 274.89
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 12,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "timestamp": "2026-11-01T21:27:41Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 53,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.6051864934619189,
+      "ml_probability": 0.5238103578803889,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.6052,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 90.78,
+        "risk_multiplier": 1.18,
+        "total_bill": 207.42
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 27,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "timestamp": "2026-11-01T21:27:36Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.5740413871023446,
+      "ml_probability": 0.48582852085651795,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.574,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 86.11,
+        "risk_multiplier": 1.18,
+        "total_bill": 201.91
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 29,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "timestamp": "2026-11-01T21:27:33Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 77,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9172154100569048,
+      "ml_probability": 0.8997675732401279,
+      "rule_layer": {
+        "rule_score": 9.2,
+        "rule_probability": 0.9967,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Age > 75",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9172,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 137.58,
+        "risk_multiplier": 1.35,
+        "total_bill": 300.48
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "timestamp": "2026-11-01T21:27:24Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 53,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.6051864934619189,
+      "ml_probability": 0.5238103578803889,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.6052,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 90.78,
+        "risk_multiplier": 1.18,
+        "total_bill": 207.42
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 27,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "timestamp": "2026-11-01T21:27:19Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 89,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9631648154491912,
+      "ml_probability": 0.9558034334746234,
+      "rule_layer": {
+        "rule_score": 9.2,
+        "rule_probability": 0.9967,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Age > 75",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9632,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 144.47,
+        "risk_multiplier": 1.35,
+        "total_bill": 309.78
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "timestamp": "2026-11-01T21:27:15Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 22,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.5731572692443678,
+      "ml_probability": 0.48475032834679016,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.5732,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 85.97,
+        "risk_multiplier": 1.18,
+        "total_bill": 201.74
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 29,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "timestamp": "2026-11-01T21:27:08Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 30,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 7,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.6064154865455478,
+      "ml_probability": 0.5253091299335949,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.6064,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 87.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 90.96,
+        "risk_multiplier": 1.18,
+        "total_bill": 310.88
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 24,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "timestamp": "2026-11-01T21:26:56Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 30,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.5736309353397613,
+      "ml_probability": 0.4853279699265382,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.5736,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 0.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 86.04,
+        "risk_multiplier": 1.18,
+        "total_bill": 201.83
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 29,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "timestamp": "2026-11-01T21:26:43Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 30,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 5,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.5492138535958293,
+      "ml_probability": 0.4555510409705235,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.5492,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 62.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 82.38,
+        "risk_multiplier": 1.18,
+        "total_bill": 271.26
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 29,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "timestamp": "2026-11-01T21:26:32Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 30,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 1,
+        "medications_count": 5,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9726771674589753,
+      "ml_probability": 0.9667672773889943,
+      "rule_layer": {
+        "rule_score": 11.3,
+        "rule_probability": 0.9996,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Anti-HTN + low BP interaction",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9727,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 62.5,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 145.9,
+        "risk_multiplier": 1.35,
+        "total_bill": 450.09
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "timestamp": "2026-11-01T21:26:25Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 50,
+        "systolic_bp": 77,
+        "heart_rate": 92,
+        "mobility_status": 1,
+        "medications_count": 5,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9846083679210362,
+      "ml_probability": 0.9813175218549224,
+      "rule_layer": {
+        "rule_score": 11.3,
+        "rule_probability": 0.9996,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Anti-HTN + low BP interaction",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9846,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 62.5,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 147.69,
+        "risk_multiplier": 1.35,
+        "total_bill": 452.51
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "timestamp": "2026-11-01T21:26:20Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 50,
+        "systolic_bp": 145,
+        "heart_rate": 92,
+        "mobility_status": 1,
+        "medications_count": 5,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9767142578876334,
+      "ml_probability": 0.9774417779117481,
+      "rule_layer": {
+        "rule_score": 7.1,
+        "rule_probability": 0.9734,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9767,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 62.5,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 146.51,
+        "risk_multiplier": 1.35,
+        "total_bill": 450.91
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "timestamp": "2026-11-01T21:26:14Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 30,
+        "systolic_bp": 145,
+        "heart_rate": 92,
+        "mobility_status": 1,
+        "medications_count": 5,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9554818614342263,
+      "ml_probability": 0.951548611505154,
+      "rule_layer": {
+        "rule_score": 7.1,
+        "rule_probability": 0.9734,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9555,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 62.5,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 143.32,
+        "risk_multiplier": 1.35,
+        "total_bill": 446.61
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "timestamp": "2026-11-01T21:24:28Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 84,
+        "systolic_bp": 154,
+        "heart_rate": 96,
+        "mobility_status": 2,
+        "medications_count": 8,
+        "previous_falls": 2,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 1,
+        "vision_impairment": 2,
+        "mental_status": 2
+      },
+      "risk_probability": 0.997660236385209,
+      "ml_probability": 0.9971466297380599,
+      "rule_layer": {
+        "rule_score": 13.8,
+        "rule_probability": 1.0,
+        "priority": "very_high",
+        "flags": [
+          "Delirium",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "High mobility impairment",
+          "Post-surgery",
+          "Age > 75",
+          "Severe vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9977,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 100.0,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 149.65,
+        "risk_multiplier": 1.35,
+        "total_bill": 559.78
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "timestamp": "2026-11-01T21:24:16Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 70,
+        "systolic_bp": 136,
+        "heart_rate": 78,
+        "mobility_status": 1,
+        "medications_count": 4,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.46064071608557045,
+      "ml_probability": 0.4839838001043542,
+      "rule_layer": {
+        "rule_score": 2.9,
+        "rule_probability": 0.3543,
+        "priority": "low",
+        "flags": [
+          "Anti-hypertensives present",
+          "Age 60\u201375"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.5394,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 69.1,
+        "risk_multiplier": 1.18,
+        "total_bill": 288.04
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 28,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "timestamp": "2026-11-01T21:24:01Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 58,
+        "systolic_bp": 122,
+        "heart_rate": 72,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 0,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.011190298723399938,
+      "ml_probability": 0.004185730150487731,
+      "rule_layer": {
+        "rule_score": 0.4,
+        "rule_probability": 0.0431,
+        "priority": "low",
+        "flags": []
+      },
+      "risk_class": "low",
+      "confidence": 0.9888,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 1.68,
+        "risk_multiplier": 1.0,
+        "total_bill": 111.68
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 72,
+        "observation_frequency": "Observe every 6 hours",
+        "care_windows": [
+          "08:00-09:00",
+          "17:00-18:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "timestamp": "2026-11-01T21:12:50Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 89,
+        "systolic_bp": 75,
+        "heart_rate": 92,
+        "mobility_status": 2,
+        "medications_count": 4,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9994057847739234,
+      "ml_probability": 0.9991747010748936,
+      "rule_layer": {
+        "rule_score": 14.2,
+        "rule_probability": 1.0,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Anti-HTN + low BP interaction",
+          "High mobility impairment",
+          "Age > 75",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9992,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 149.91,
+        "risk_multiplier": 1.35,
+        "total_bill": 492.63
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "timestamp": "2026-11-01T21:12:33Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 89,
+        "systolic_bp": 75,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9960290468052395,
+      "ml_probability": 0.9945236761183881,
+      "rule_layer": {
+        "rule_score": 12.6,
+        "rule_probability": 0.9999,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Anti-HTN + low BP interaction",
+          "Age > 75",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9945,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 149.4,
+        "risk_multiplier": 1.35,
+        "total_bill": 383.94
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "timestamp": "2026-11-01T21:12:21Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 89,
+        "systolic_bp": 117,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9960288810496247,
+      "ml_probability": 0.9973623347911453,
+      "rule_layer": {
+        "rule_score": 8.4,
+        "rule_probability": 0.9926,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Age > 75",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9974,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 149.4,
+        "risk_multiplier": 1.35,
+        "total_bill": 383.94
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "timestamp": "2026-11-01T21:11:19Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 45,
+        "systolic_bp": 117,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.8844322496072252,
+      "ml_probability": 0.8597892355655906,
+      "rule_layer": {
+        "rule_score": 6.4,
+        "rule_probability": 0.9478,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.8598,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 132.66,
+        "risk_multiplier": 1.35,
+        "total_bill": 361.34
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 5,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "timestamp": "2026-04-01T10:04:12Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 117,
+        "heart_rate": 91,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 1,
+        "mental_status": 0
+      },
+      "risk_probability": 0.5305277056343678,
+      "ml_probability": 0.46038292449217744,
+      "rule_layer": {
+        "rule_score": 4.4,
+        "rule_probability": 0.7109,
+        "priority": "moderate",
+        "flags": [
+          "Opioids present",
+          "Post-surgery",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.5396,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 79.58,
+        "risk_multiplier": 1.18,
+        "total_bill": 223.7
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 31,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "timestamp": "2026-04-01T09:26:32Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 44,
+        "systolic_bp": 112,
+        "heart_rate": 87,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.8438689588473749,
+      "ml_probability": 0.9486624428435763,
+      "rule_layer": {
+        "rule_score": 3.8,
+        "rule_probability": 0.5744,
+        "priority": "moderate",
+        "flags": [
+          "Sedatives present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9487,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 126.58,
+        "risk_multiplier": 1.35,
+        "total_bill": 319.38
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "timestamp": "2026-03-31T19:57:42Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 60,
+        "systolic_bp": 140,
+        "heart_rate": 89,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.7977273580084897,
+      "ml_probability": 0.9789213305673469,
+      "rule_layer": {
+        "rule_score": 2.8,
+        "rule_probability": 0.3318,
+        "priority": "low",
+        "flags": [
+          "Sedatives present",
+          "Age 60\u201375"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9789,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 119.66,
+        "risk_multiplier": 1.35,
+        "total_bill": 310.04
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 9,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "timestamp": "2026-03-31T19:57:32Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 140,
+        "heart_rate": 89,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.6101462171406026,
+      "ml_probability": 0.787341968250837,
+      "rule_layer": {
+        "rule_score": 1.8,
+        "rule_probability": 0.1545,
+        "priority": "low",
+        "flags": [
+          "Sedatives present"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.7873,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 91.52,
+        "risk_multiplier": 1.18,
+        "total_bill": 237.79
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 23,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "timestamp": "2026-03-31T19:12:51Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 56,
+        "systolic_bp": 96,
+        "heart_rate": 78,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9234482224353009,
+      "ml_probability": 0.9231947533823622,
+      "rule_layer": {
+        "rule_score": 6.0,
+        "rule_probability": 0.9241,
+        "priority": "high",
+        "flags": [
+          "Borderline systolic BP (90\u2013100)",
+          "Anti-hypertensives present",
+          "Anti-HTN + low BP interaction",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9232,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 138.52,
+        "risk_multiplier": 1.35,
+        "total_bill": 335.5
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "timestamp": "2026-03-31T19:12:35Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 56,
+        "systolic_bp": 134,
+        "heart_rate": 70,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.8049690870942916,
+      "ml_probability": 0.9525015098531827,
+      "rule_layer": {
+        "rule_score": 3.2,
+        "rule_probability": 0.4256,
+        "priority": "low",
+        "flags": [
+          "Anti-hypertensives present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9525,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 120.75,
+        "risk_multiplier": 1.35,
+        "total_bill": 311.51
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 9,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "timestamp": "2026-03-31T14:34:41Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 54,
+        "systolic_bp": 75,
+        "heart_rate": 90,
+        "mobility_status": 2,
+        "medications_count": 3,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 1,
+        "mental_status": 2
+      },
+      "risk_probability": 0.9759827667856711,
+      "ml_probability": 0.9666816205356541,
+      "rule_layer": {
+        "rule_score": 13.2,
+        "rule_probability": 0.9999,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Delirium",
+          "Sedatives present",
+          "High mobility impairment",
+          "Post-surgery",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9667,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 146.4,
+        "risk_multiplier": 1.35,
+        "total_bill": 471.01
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "timestamp": "2026-03-31T14:33:18Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 54,
+        "systolic_bp": 75,
+        "heart_rate": 90,
+        "mobility_status": 2,
+        "medications_count": 3,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 1,
+        "mental_status": 2
+      },
+      "risk_probability": 0.9759827667856711,
+      "ml_probability": 0.9666816205356541,
+      "rule_layer": {
+        "rule_score": 13.2,
+        "rule_probability": 0.9999,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Delirium",
+          "Sedatives present",
+          "High mobility impairment",
+          "Post-surgery",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9667,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 146.4,
+        "risk_multiplier": 1.35,
+        "total_bill": 471.01
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "timestamp": "2026-03-31T11:03:12Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 18,
+        "systolic_bp": 90,
+        "heart_rate": 70,
+        "mobility_status": 0,
+        "medications_count": 3,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.5269509660065372,
+      "ml_probability": 0.5471541194535239,
+      "rule_layer": {
+        "rule_score": 3.4,
+        "rule_probability": 0.475,
+        "priority": "moderate",
+        "flags": [
+          "Borderline systolic BP (90\u2013100)",
+          "Sedatives present"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.5472,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 79.04,
+        "risk_multiplier": 1.18,
+        "total_bill": 237.82
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 26,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "timestamp": "2026-03-31T10:22:45Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 200,
+        "heart_rate": 71,
+        "mobility_status": 0,
+        "medications_count": 3,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.7428415801313094,
+      "ml_probability": 0.9716410835157075,
+      "rule_layer": {
+        "rule_score": 1.8,
+        "rule_probability": 0.1545,
+        "priority": "low",
+        "flags": [
+          "Sedatives present"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9716,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 111.43,
+        "risk_multiplier": 1.35,
+        "total_bill": 315.81
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 10,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "timestamp": "2026-03-31T10:22:23Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 133,
+        "heart_rate": 79,
+        "mobility_status": 0,
+        "medications_count": 3,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.7094357814473436,
+      "ml_probability": 0.9252441408990885,
+      "rule_layer": {
+        "rule_score": 1.8,
+        "rule_probability": 0.1545,
+        "priority": "low",
+        "flags": [
+          "Sedatives present"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9252,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 106.42,
+        "risk_multiplier": 1.35,
+        "total_bill": 309.04
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 12,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "timestamp": "2026-03-30T23:18:09Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 44,
+        "systolic_bp": 98,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 3,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.900244555645453,
+      "ml_probability": 0.8883229939520182,
+      "rule_layer": {
+        "rule_score": 6.1,
+        "rule_probability": 0.9309,
+        "priority": "high",
+        "flags": [
+          "Borderline systolic BP (90\u2013100)",
+          "Opioids present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.8883,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 135.04,
+        "risk_multiplier": 1.35,
+        "total_bill": 401.68
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "timestamp": "2026-03-30T18:39:29Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 98,
+        "systolic_bp": 133,
+        "heart_rate": 60,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9955215889531002,
+      "ml_probability": 0.9995355402126392,
+      "rule_layer": {
+        "rule_score": 7.7,
+        "rule_probability": 0.9852,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Opioids present",
+          "Age > 75"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9995,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 149.33,
+        "risk_multiplier": 1.35,
+        "total_bill": 404.1
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "timestamp": "2026-03-30T18:39:20Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 133,
+        "heart_rate": 60,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 1
+      },
+      "risk_probability": 0.8496254265856873,
+      "ml_probability": 0.8299575369245659,
+      "rule_layer": {
+        "rule_score": 5.7,
+        "rule_probability": 0.9002,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Opioids present"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.83,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 127.44,
+        "risk_multiplier": 1.35,
+        "total_bill": 374.54
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "timestamp": "2026-03-30T18:39:14Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 133,
+        "heart_rate": 60,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 1
+      },
+      "risk_probability": 0.8496254265856873,
+      "ml_probability": 0.8299575369245659,
+      "rule_layer": {
+        "rule_score": 5.7,
+        "rule_probability": 0.9002,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Opioids present"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.83,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 127.44,
+        "risk_multiplier": 1.35,
+        "total_bill": 374.54
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "timestamp": "2026-03-30T18:39:09Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 133,
+        "heart_rate": 60,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 1
+      },
+      "risk_probability": 0.8496254265856873,
+      "ml_probability": 0.8299575369245659,
+      "rule_layer": {
+        "rule_score": 5.7,
+        "rule_probability": 0.9002,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Opioids present"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.83,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 127.44,
+        "risk_multiplier": 1.35,
+        "total_bill": 374.54
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "timestamp": "2026-03-30T18:39:04Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 133,
+        "heart_rate": 60,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 1
+      },
+      "risk_probability": 0.8496254265856873,
+      "ml_probability": 0.8299575369245659,
+      "rule_layer": {
+        "rule_score": 5.7,
+        "rule_probability": 0.9002,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Opioids present"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.83,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 127.44,
+        "risk_multiplier": 1.35,
+        "total_bill": 374.54
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "timestamp": "2026-03-30T18:38:45Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 128,
+        "heart_rate": 124,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9523559847608575,
+      "ml_probability": 0.937716645501191,
+      "rule_layer": {
+        "rule_score": 8.1,
+        "rule_probability": 0.99,
+        "priority": "very_high",
+        "flags": [
+          "Tachycardia (>110)",
+          "Confused mental status",
+          "Opioids present"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9377,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 142.85,
+        "risk_multiplier": 1.35,
+        "total_bill": 395.35
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "timestamp": "2026-03-30T16:13:24Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 23,
+        "systolic_bp": 80,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 2,
+        "mental_status": 1
+      },
+      "risk_probability": 0.5313950848789804,
+      "ml_probability": 0.34923761788747276,
+      "rule_layer": {
+        "rule_score": 12.1,
+        "rule_probability": 0.9998,
+        "priority": "very_high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Confused mental status",
+          "Opioids present",
+          "Post-surgery",
+          "Severe vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.6508,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 79.71,
+        "risk_multiplier": 1.18,
+        "total_bill": 271.06
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 27,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "timestamp": "2026-03-30T16:10:52Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 23,
+        "systolic_bp": 104,
+        "heart_rate": 83,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 2,
+        "mental_status": 1
+      },
+      "risk_probability": 0.5464568933869858,
+      "ml_probability": 0.37151790748192476,
+      "rule_layer": {
+        "rule_score": 9.1,
+        "rule_probability": 0.9963,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Opioids present",
+          "Post-surgery",
+          "Severe vision impairment"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.6285,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 81.97,
+        "risk_multiplier": 1.18,
+        "total_bill": 273.72
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 26,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "timestamp": "2026-03-30T15:24:51Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 129,
+        "heart_rate": 95,
+        "mobility_status": 0,
+        "medications_count": 3,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.7643782013207585,
+      "ml_probability": 0.838258612945498,
+      "rule_layer": {
+        "rule_score": 3.8,
+        "rule_probability": 0.5744,
+        "priority": "moderate",
+        "flags": [
+          "Opioids present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.8383,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 114.66,
+        "risk_multiplier": 1.35,
+        "total_bill": 320.17
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 11,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "timestamp": "2026-03-30T15:11:53Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 124,
+        "heart_rate": 90,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.8937063717919425,
+      "ml_probability": 0.9569421830443646,
+      "rule_layer": {
+        "rule_score": 4.5,
+        "rule_probability": 0.7311,
+        "priority": "moderate",
+        "flags": [
+          "Sedatives present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9569,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 134.06,
+        "risk_multiplier": 1.35,
+        "total_bill": 383.48
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "timestamp": "2026-03-29T11:31:53Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 130,
+        "heart_rate": 88,
+        "mobility_status": 0,
+        "medications_count": 3,
+        "previous_falls": 2,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.7526804770330493,
+      "ml_probability": 0.8220117736570131,
+      "rule_layer": {
+        "rule_score": 3.8,
+        "rule_probability": 0.5744,
+        "priority": "moderate",
+        "flags": [
+          "Sedatives present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.822,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 112.9,
+        "risk_multiplier": 1.35,
+        "total_bill": 317.79
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 12,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-03-28T06:25:35Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 33,
+        "systolic_bp": 130,
+        "heart_rate": 85,
+        "mobility_status": 0,
+        "medications_count": 3,
+        "previous_falls": 2,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 1,
+        "mental_status": 2
+      },
+      "risk_probability": 0.8536769882819828,
+      "ml_probability": 0.8135347059471982,
+      "rule_layer": {
+        "rule_score": 6.6,
+        "rule_probability": 0.9569,
+        "priority": "very_high",
+        "flags": [
+          "Delirium",
+          "Sedatives present",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.8135,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 128.05,
+        "risk_multiplier": 1.35,
+        "total_bill": 338.24
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 5,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-03-27T16:04:39Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 18,
+        "systolic_bp": 141,
+        "heart_rate": 95,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.7689356701167182,
+      "ml_probability": 0.7035773196065529,
+      "rule_layer": {
+        "rule_score": 6.2,
+        "rule_probability": 0.937,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Post-surgery",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.7036,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 115.34,
+        "risk_multiplier": 1.35,
+        "total_bill": 337.96
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 10,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-03-27T16:04:19Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 65,
+        "systolic_bp": 136,
+        "heart_rate": 85,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9883857206117778,
+      "ml_probability": 0.993241278627469,
+      "rule_layer": {
+        "rule_score": 7.2,
+        "rule_probability": 0.9759,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Post-surgery",
+          "Age 60\u201375",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9932,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 148.26,
+        "risk_multiplier": 1.35,
+        "total_bill": 382.4
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-03-27T16:01:30Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 44,
+        "systolic_bp": 135,
+        "heart_rate": 92,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 1,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9524395690951256,
+      "ml_probability": 0.9584438459654522,
+      "rule_layer": {
+        "rule_score": 6.2,
+        "rule_probability": 0.937,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Post-surgery",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9584,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 142.87,
+        "risk_multiplier": 1.35,
+        "total_bill": 375.12
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-03-27T14:46:04Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 43,
+        "systolic_bp": 89,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 1
+      },
+      "risk_probability": 0.803490354901375,
+      "risk_class": "high",
+      "confidence": 0.8035,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 120.52,
+        "risk_multiplier": 1.35,
+        "total_bill": 365.2
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 8,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-03-27T06:13:15Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 22,
+        "systolic_bp": 72,
+        "heart_rate": 100,
+        "mobility_status": 0,
+        "medications_count": 3,
+        "previous_falls": 2
+      },
+      "risk_probability": 0.4290853230702973,
+      "risk_class": "medium",
+      "confidence": 0.5709,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 37.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 64.36,
+        "risk_multiplier": 1.18,
+        "total_bill": 220.49
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 36,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-03-27T05:59:18Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 22,
+        "systolic_bp": 78,
+        "heart_rate": 99,
+        "mobility_status": 0,
+        "medications_count": 2,
+        "previous_falls": 1
+      },
+      "risk_probability": 0.15206328463864185,
+      "risk_class": "low",
+      "confidence": 0.8479,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 22.81,
+        "risk_multiplier": 1.0,
+        "total_bill": 132.81
+      }
+    },
+    {
+      "id": 1,
+      "timestamp": "2026-03-27T05:57:37Z",
+      "username": "suryansh@964",
+      "payload": {
+        "age": 23,
+        "systolic_bp": 77,
+        "heart_rate": 99,
+        "mobility_status": 0,
+        "medications_count": 1,
+        "previous_falls": 2
+      },
+      "risk_probability": 0.2783123433533691,
+      "risk_class": "low",
+      "confidence": 0.7217,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 12.5,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 41.75,
+        "risk_multiplier": 1.0,
+        "total_bill": 139.25
+      }
+    }
+  ],
+  "abhishek001": [],
+  "abhishek01": [
+    {
+      "id": 11,
+      "timestamp": "2026-03-30T18:16:51Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 100,
+        "systolic_bp": 122,
+        "heart_rate": 100,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9744332035735064,
+      "ml_probability": 0.9999183382965365,
+      "rule_layer": {
+        "rule_score": 5.8,
+        "rule_probability": 0.9089,
+        "priority": "high",
+        "flags": [
+          "Sedatives present",
+          "Post-surgery",
+          "Age > 75"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9999,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 146.16,
+        "risk_multiplier": 1.35,
+        "total_bill": 379.57
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "timestamp": "2026-03-30T18:16:29Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 100,
+        "systolic_bp": 103,
+        "heart_rate": 79,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9743699998818794,
+      "ml_probability": 0.9998305553914991,
+      "rule_layer": {
+        "rule_score": 5.8,
+        "rule_probability": 0.9089,
+        "priority": "high",
+        "flags": [
+          "Sedatives present",
+          "Post-surgery",
+          "Age > 75"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9998,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 146.16,
+        "risk_multiplier": 1.35,
+        "total_bill": 379.57
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "timestamp": "2026-03-30T18:16:16Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 88,
+        "systolic_bp": 117,
+        "heart_rate": 81,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9742089849437499,
+      "ml_probability": 0.9996069235329859,
+      "rule_layer": {
+        "rule_score": 5.8,
+        "rule_probability": 0.9089,
+        "priority": "high",
+        "flags": [
+          "Sedatives present",
+          "Post-surgery",
+          "Age > 75"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9996,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 146.13,
+        "risk_multiplier": 1.35,
+        "total_bill": 379.53
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-03-30T18:16:07Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 88,
+        "systolic_bp": 140,
+        "heart_rate": 72,
+        "mobility_status": 0,
+        "medications_count": 4,
+        "previous_falls": 3,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9742673273803804,
+      "ml_probability": 0.9996879546949727,
+      "rule_layer": {
+        "rule_score": 5.8,
+        "rule_probability": 0.9089,
+        "priority": "high",
+        "flags": [
+          "Sedatives present",
+          "Post-surgery",
+          "Age > 75"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9997,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 146.14,
+        "risk_multiplier": 1.35,
+        "total_bill": 379.54
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-03-30T16:20:06Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 68,
+        "systolic_bp": 90,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 1,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9557940577984267,
+      "ml_probability": 0.9774139691644818,
+      "rule_layer": {
+        "rule_score": 5.7,
+        "rule_probability": 0.9002,
+        "priority": "high",
+        "flags": [
+          "Borderline systolic BP (90\u2013100)",
+          "Anti-hypertensives present",
+          "Anti-HTN + low BP interaction",
+          "Age 60\u201375"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9774,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 143.37,
+        "risk_multiplier": 1.35,
+        "total_bill": 396.05
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-03-30T16:18:40Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 23,
+        "systolic_bp": 120,
+        "heart_rate": 80,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.520211857094226,
+      "ml_probability": 0.6901609126308694,
+      "rule_layer": {
+        "rule_score": 1.1,
+        "rule_probability": 0.0832,
+        "priority": "low",
+        "flags": []
+      },
+      "risk_class": "medium",
+      "confidence": 0.6902,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 78.03,
+        "risk_multiplier": 1.18,
+        "total_bill": 269.08
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 25,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-03-30T16:18:27Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 23,
+        "systolic_bp": 80,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.625862977085801,
+      "ml_probability": 0.6181485792858347,
+      "rule_layer": {
+        "rule_score": 4.1,
+        "rule_probability": 0.6457,
+        "priority": "moderate",
+        "flags": [
+          "Low systolic BP (<90)"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.6181,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 93.88,
+        "risk_multiplier": 1.18,
+        "total_bill": 287.78
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 17,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-03-30T16:18:18Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 23,
+        "systolic_bp": 80,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.720026977085801,
+      "ml_probability": 0.6181485792858347,
+      "rule_layer": {
+        "rule_score": 7.5,
+        "rule_probability": 0.982,
+        "priority": "high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Opioids present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.6181,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 108.0,
+        "risk_multiplier": 1.35,
+        "total_bill": 348.3
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 11,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-03-30T16:16:13Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 56,
+        "systolic_bp": 80,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9752995610164772,
+      "ml_probability": 0.9726938347451073,
+      "rule_layer": {
+        "rule_score": 7.5,
+        "rule_probability": 0.982,
+        "priority": "high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Opioids present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9727,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 146.29,
+        "risk_multiplier": 1.35,
+        "total_bill": 399.99
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-03-30T16:16:02Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 56,
+        "systolic_bp": 80,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.9752995610164772,
+      "ml_probability": 0.9726938347451073,
+      "rule_layer": {
+        "rule_score": 7.5,
+        "rule_probability": 0.982,
+        "priority": "high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Opioids present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9727,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 146.29,
+        "risk_multiplier": 1.35,
+        "total_bill": 399.99
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "timestamp": "2026-03-30T16:15:12Z",
+      "username": "abhishek01",
+      "payload": {
+        "age": 34,
+        "systolic_bp": 80,
+        "heart_rate": 100,
+        "mobility_status": 1,
+        "medications_count": 2,
+        "previous_falls": 2,
+        "sedatives": 0,
+        "opioids": 1,
+        "anti_hypertensives": 0,
+        "post_surgery": 1,
+        "vision_impairment": 0,
+        "mental_status": 0
+      },
+      "risk_probability": 0.864909822640817,
+      "ml_probability": 0.8193747536678014,
+      "rule_layer": {
+        "rule_score": 7.5,
+        "rule_probability": 0.982,
+        "priority": "high",
+        "flags": [
+          "Low systolic BP (<90)",
+          "Opioids present",
+          "Post-surgery"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.8194,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 129.74,
+        "risk_multiplier": 1.35,
+        "total_bill": 377.65
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    }
+  ],
+  "demo_doctor": [
+    {
+      "id": 5,
+      "timestamp": "2026-11-01T21:22:28Z",
+      "username": "demo_doctor",
+      "payload": {
+        "age": 84,
+        "anti_hypertensives": 1,
+        "heart_rate": 96,
+        "medications_count": 8,
+        "mental_status": 2,
+        "mobility_status": 2,
+        "opioids": 0,
+        "post_surgery": 1,
+        "previous_falls": 2,
+        "sedatives": 1,
+        "systolic_bp": 154,
+        "vision_impairment": 2
+      },
+      "risk_probability": 0.997660236385209,
+      "ml_probability": 0.9971466297380599,
+      "rule_layer": {
+        "rule_score": 13.8,
+        "rule_probability": 1.0,
+        "priority": "very_high",
+        "flags": [
+          "Delirium",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "High mobility impairment",
+          "Post-surgery",
+          "Age > 75",
+          "Severe vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9977,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 100.0,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 149.65,
+        "risk_multiplier": 1.35,
+        "total_bill": 559.78
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-11-01T21:22:28Z",
+      "username": "demo_doctor",
+      "payload": {
+        "age": 72,
+        "anti_hypertensives": 1,
+        "heart_rate": 78,
+        "medications_count": 4,
+        "mental_status": 0,
+        "mobility_status": 1,
+        "opioids": 0,
+        "post_surgery": 0,
+        "previous_falls": 1,
+        "sedatives": 0,
+        "systolic_bp": 136,
+        "vision_impairment": 0
+      },
+      "risk_probability": 0.5105806421271186,
+      "ml_probability": 0.5448861489355105,
+      "rule_layer": {
+        "rule_score": 2.9,
+        "rule_probability": 0.3543,
+        "priority": "low",
+        "flags": [
+          "Anti-hypertensives present",
+          "Age 60\u201375"
+        ]
+      },
+      "risk_class": "medium",
+      "confidence": 0.5106,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 50.0,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 76.59,
+        "risk_multiplier": 1.18,
+        "total_bill": 296.88
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 25,
+        "observation_frequency": "Observe every 4 hours",
+        "care_windows": [
+          "07:00-09:00",
+          "14:00-16:00",
+          "21:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-11-01T21:22:28Z",
+      "username": "demo_doctor",
+      "payload": {
+        "age": 55,
+        "anti_hypertensives": 0,
+        "heart_rate": 72,
+        "medications_count": 2,
+        "mental_status": 0,
+        "mobility_status": 0,
+        "opioids": 0,
+        "post_surgery": 0,
+        "previous_falls": 0,
+        "sedatives": 0,
+        "systolic_bp": 120,
+        "vision_impairment": 0
+      },
+      "risk_probability": 0.010945053693952959,
+      "ml_probability": 0.0038866508462840972,
+      "rule_layer": {
+        "rule_score": 0.4,
+        "rule_probability": 0.0431,
+        "priority": "low",
+        "flags": []
+      },
+      "risk_class": "low",
+      "confidence": 0.9891,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 25.0,
+        "mobility_charge": 0.0,
+        "monitoring_charge": 1.64,
+        "risk_multiplier": 1.0,
+        "total_bill": 111.64
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 72,
+        "observation_frequency": "Observe every 6 hours",
+        "care_windows": [
+          "08:00-09:00",
+          "17:00-18:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-11-01T20:51:23Z",
+      "username": "demo_doctor",
+      "payload": {
+        "age": 72,
+        "systolic_bp": 145,
+        "heart_rate": 94,
+        "mobility_status": 1,
+        "medications_count": 5,
+        "previous_falls": 2,
+        "sedatives": 1,
+        "opioids": 0,
+        "anti_hypertensives": 0,
+        "post_surgery": 0,
+        "vision_impairment": 0,
+        "mental_status": 1
+      },
+      "risk_probability": 0.9885555350156561,
+      "ml_probability": 0.9993493541884112,
+      "rule_layer": {
+        "rule_score": 6.7,
+        "rule_probability": 0.9608,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Sedatives present",
+          "Age 60\u201375"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9993,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 62.5,
+        "mobility_charge": 40.0,
+        "monitoring_charge": 148.28,
+        "risk_multiplier": 1.35,
+        "total_bill": 453.3
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "timestamp": "2026-11-01T20:46:10Z",
+      "username": "demo_doctor",
+      "payload": {
+        "age": 75,
+        "anti_hypertensives": 1,
+        "heart_rate": 92,
+        "medications_count": 6,
+        "mental_status": 1,
+        "mobility_status": 2,
+        "opioids": 0,
+        "post_surgery": 0,
+        "previous_falls": 1,
+        "sedatives": 1,
+        "systolic_bp": 145,
+        "vision_impairment": 1
+      },
+      "risk_probability": 0.998568413512662,
+      "ml_probability": 0.9996061298786973,
+      "rule_layer": {
+        "rule_score": 9.0,
+        "rule_probability": 0.9959,
+        "priority": "very_high",
+        "flags": [
+          "Confused mental status",
+          "Sedatives present",
+          "Anti-hypertensives present",
+          "High mobility impairment",
+          "Age 60\u201375",
+          "Mild vision impairment"
+        ]
+      },
+      "risk_class": "high",
+      "confidence": 0.9996,
+      "bill": {
+        "base_consultation": 85.0,
+        "medications_cost": 75.0,
+        "mobility_charge": 80.0,
+        "monitoring_charge": 149.79,
+        "risk_multiplier": 1.35,
+        "total_bill": 526.22
+      },
+      "care_plan": {
+        "expected_fall_window_hours": 4,
+        "observation_frequency": "Observe every 2 hours",
+        "care_windows": [
+          "06:00-08:00",
+          "13:00-15:00",
+          "20:00-22:00"
+        ],
+        "medication_guidance": "Review sedatives/antihypertensives and avoid dose clustering near bedtime.",
+        "emergency_actions": [
+          "If a fall happens, keep the patient still, check breathing/bleeding, and call emergency support.",
+          "Do not give extra sedatives; provide prescribed pain relief only after medical advice."
+        ]
+      }
+    }
+  ]
+}

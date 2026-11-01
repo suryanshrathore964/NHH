@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+
+body.loading-page {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+              #f8fafc;
+  color: #0f172a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.06) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.loader-shell {
+  width: min(640px, 92vw);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2.5rem 2.2rem;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.03);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.loader-shell.fade-out {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.loader-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.brand-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.brand-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-info {
+  text-align: left;
+}
+
+.system-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0284c7;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.loader-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hud-wrap {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  margin: 1.2rem auto 0.6rem;
+}
+
+.ring {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 999px;
+}
+
+.ring-outer {
+  top: 0;
+  width: 90%;
+  height: 20px;
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  animation: pulseBar 2s ease-in-out infinite;
+}
+
+.ring-inner {
+  top: 4px;
+  width: 75%;
+  height: 12px;
+  background: rgba(14, 165, 233, 0.12);
+  animation: pulseBar 2s ease-in-out infinite reverse;
+}
+
+.ring-core {
+  top: 7px;
+  width: 55%;
+  height: 6px;
+  background: linear-gradient(90deg, #0284c7, #10b981);
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.3);
+}
+
+.status-text {
+  margin: 0.8rem 0 1.2rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  min-height: 1.4rem;
+}
+
+.ecg-container {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ecg {
+  width: 100%;
+  height: 60px;
+}
+
+.ecg path {
+  fill: none;
+  stroke: #0284c7;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 4px rgba(2, 132, 199, 0.4));
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: ecgMove 2s linear infinite;
+}
+
+.progress-wrap {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #0284c7, #10b981);
+  transition: width 0.15s ease-out;
+}
+
+.progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.progress-text {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.skip-btn {
+  background: none;
+  border: none;
+  color: #0284c7;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.skip-btn:hover {
+  background: #f0f9ff;
+  color: #0369a1;
+}
+
+@keyframes ecgMove {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulseBar {
+  50% {
+    transform: scaleX(1.02);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECHMECHS Healthcare | Clinician Portal Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-layout">
+      <div class="auth-card-wrapper">
+        <section class="card auth-card">
+          <!-- Hospital Header Badge -->
+          <div class="auth-header">
+            <div class="auth-logo-badge">
+              <img src="/logo.png" alt="TECHMECHS Logo" class="auth-logo" />
+            </div>
+            <div class="auth-title-group">
+              <div class="system-status-chip">
+                <span class="status-dot"></span>
+                <span>CLINICAL AI ENGINE ONLINE</span>
+              </div>
+              <h1>TECHMECHS</h1>
+              <p class="auth-subhead">Healthcare Fall Risk Intelligence Portal</p>
+            </div>
+          </div>
+
+          <!-- Quick 1-Click Demo Login Banner -->
+          <div class="quick-demo-box">
+            <div class="demo-info">
+              <strong>Quick Clinician Access</strong>
+              <small>Instant sign-in with pre-configured demo doctor account</small>
+            </div>
+            <button type="button" id="demo-login-btn" class="demo-btn">
+              ⚡ 1-Click Doctor Login
+            </button>
+          </div>
+
+          <!-- Auth Mode Tabs -->
+          <div class="auth-tabs">
+            <button type="button" id="tab-signin" class="tab-btn active">Sign In</button>
+            <button type="button" id="tab-signup" class="tab-btn">Create Account</button>
+          </div>
+
+          <form id="auth-form" class="auth-form">
+            <div class="form-group">
+              <label for="username">Clinician ID / Username</label>
+              <div class="input-wrap">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="e.g. demo_doctor or your name"
+                  autocomplete="username"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-wrap">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your clinical password"
+                  autocomplete="current-password"
+                  required
+                />
+                <button type="button" id="toggle-pwd-btn" class="toggle-pwd-btn" title="Toggle password visibility">
+                  👁️
+                </button>
+              </div>
+            </div>
+
+            <div class="auth-actions">
+              <button type="submit" id="submit-auth-btn" class="primary-btn submit-btn">
+                <span id="submit-btn-text">Sign In to Dashboard</span>
+                <span id="submit-spinner" class="spinner-sm hidden"></span>
+              </button>
+            </div>
+          </form>
+
+          <p id="auth-message" class="auth-message"></p>
+
+          <div class="auth-footer">
+            <small>Protected Clinical Decision System • HIPAA/Privacy-Safe Synthetic Inference</small>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="signin.js"></script>
+  </body>
+</html>
