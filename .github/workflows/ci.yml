@@ -1,0 +1,50 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Test Flask App & ML Model Loading
+      run: |
+        python -c "
+        import app
+        import pickle
+        import numpy as np
+
+        # Verify model loads
+        with open('model.pkl', 'rb') as f:
+            bundle = pickle.load(f)
+            model = bundle.model
+            metrics = bundle.metrics
+            print('✓ Model loaded successfully. Metrics:', metrics)
+
+        # Test dummy prediction vector (12 features)
+        sample = np.array([[72, 1, 1, 1, 2, 0, 1, 1, 0, 1, 2, 1]])
+        prob = model.predict_proba(sample)[0][1]
+        print(f'✓ Sample prediction probability: {prob:.4f}')
+
+        # Test Flask app client
+        client = app.app.test_client()
+        res = client.get('/')
+        assert res.status_code == 200, f'Expected 200, got {res.status_code}'
+        print('✓ Flask root route verified (Status 200 OK)')
+        "
