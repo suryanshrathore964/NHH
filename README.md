@@ -1,14 +1,34 @@
-# Intelligent Fall Risk Healthcare Dashboard
+# TECHMECHS Healthcare — Clinical Fall Risk Intelligence Platform
+
+[![CI Pipeline](https://github.com/suryanshrathore964/NHH/actions/workflows/ci.yml/badge.svg)](https://github.com/suryanshrathore964/NHH/actions/workflows/ci.yml)
+[![Accuracy](https://img.shields.io/badge/Model%20Accuracy-93.0%25-success?style=flat-square&logo=scikitlearn)](https://github.com/suryanshrathore964/NHH)
+[![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.9864-blue?style=flat-square)](https://github.com/suryanshrathore964/NHH)
+[![Python](https://img.shields.io/badge/Python-3.9%20%7C%203.10-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/suryanshrathore964/NHH)
+[![Flask](https://img.shields.io/badge/Flask-2.3+-black?style=flat-square&logo=flask)](https://github.com/suryanshrathore964/NHH)
+[![Docker Ready](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://github.com/suryanshrathore964/NHH)
+
+---
+
+### 🌐 Live Production Demo
+> **Live Web Application:** [🚀 Launch Clinical Command Center](https://nhh-fall-risk.onrender.com)
+> 
+> *Quick Access Credentials:*
+> - **Doctor Username:** `demo_doctor`
+> - **Password:** `Password123!`
+> *(You can also click **"Create Account"** on the portal to register a new account instantly)*
+
+---
 
 Full-stack clinical intelligence platform that predicts patient fall risk using a 12-parameter clinical machine learning ensemble (Gradient Boosting, Calibrated Logistic Regression, and Random Forest) based on epidemiological clinical scales (Morse Fall Scale & Hendrich II).
 
 ## Tech Stack
 
-- Backend: Python 3.9+, Flask, scikit-learn, ReportLab
-- ML Architecture: Soft-Voting Clinical Ensemble (Gradient Boosting + Regularized Logistic Regression + Random Forest)
-- Evaluation Metrics: 93.0% Accuracy, 94.8% Precision, 92.7% Recall, 0.9864 ROC-AUC
-- Frontend: HTML5, CSS3 (White Clinical Medical Theme), JavaScript, Chart.js
-- Model Persistence: `pickle` (`model.pkl`)
+- **Backend**: Python 3.9+, Flask, scikit-learn, ReportLab Platypus
+- **ML Architecture**: Soft-Voting Clinical Ensemble (Gradient Boosting + Regularized Logistic Regression + Random Forest)
+- **Evaluation Metrics**: 93.0% Accuracy, 94.8% Precision, 92.7% Recall, 0.9864 ROC-AUC
+- **Frontend**: HTML5, Modern CSS3 (Pure White Clinical Theme), JavaScript, Chart.js
+- **Model Persistence**: `pickle` (`model.pkl`)
+- **Containerization & CI**: Dockerfile, Procfile, GitHub Actions CI Pipeline (Automated testing on Ubuntu)
 
 ## Features
 
